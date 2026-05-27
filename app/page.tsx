@@ -137,21 +137,35 @@ export default function Home() {
       {/* TOP BRAND POSTER */}
       <section className="bg-white">
         <header className="relative z-30 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex items-center justify-between gap-4">
-            <div className="[&_*]:!text-slate-950">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 py-3 grid grid-cols-[1fr_auto_1fr] items-center gap-2">
+            <div className="[&_*]:!text-slate-950 scale-[0.78] sm:scale-100 origin-left justify-self-start w-[148px] sm:w-auto">
               <Logo />
             </div>
 
+            <img
+              src="/images/header-flash.jpeg"
+              alt="Accredited repairer"
+              className="w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20 object-contain animate-pulse justify-self-center"
+            />
+
             <a
               href={`tel:${phoneNumber}`}
-              className="flex bg-red-600 hover:bg-red-700 hover:-translate-y-1 transition-all duration-300 rounded-full px-4 sm:px-6 py-3 items-center gap-2 font-black text-white shadow-xl shadow-red-600/30 animate-pulse text-sm sm:text-base"
+              className="flex bg-red-600 hover:bg-red-700 transition-all duration-300 rounded-full px-3 sm:px-6 py-2.5 sm:py-3 items-center gap-1.5 sm:gap-2 font-black text-white shadow-xl shadow-red-600/25 animate-pulse text-xs sm:text-base shrink-0 justify-self-end"
             >
-              <Phone size={18} />
-              <span className="hidden sm:inline">{phoneNumber}</span>
-              <span className="sm:hidden">Call</span>
+              <Phone size={14} className="sm:w-[18px] sm:h-[18px]" />
+              <span className="hidden md:inline">{phoneNumber}</span>
+              <span className="md:hidden">Call</span>
             </a>
           </div>
         </header>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-3">
+          <div className="w-full rounded-full bg-green-500 px-4 py-2 shadow-lg shadow-green-500/25 text-center">
+            <span className="text-white text-xs sm:text-sm font-black uppercase tracking-wide">
+              The City’s Local Mobile Tyre Fleet
+            </span>
+          </div>
+        </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-8">
           <img
@@ -164,7 +178,7 @@ export default function Home() {
 
       {/* HERO CONTENT */}
       <section className="relative bg-slate-950 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(220,38,38,0.18),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(18,60,156,0.18),transparent_38%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(220,38,38,0.12),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(18,60,156,0.12),transparent_38%)]"></div>
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-20">
           <motion.div
@@ -173,6 +187,21 @@ export default function Home() {
             transition={{ duration: 0.75 }}
             className="max-w-3xl"
           >
+            <div className="mb-5 grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-2xl">
+              <a
+                href={`tel:${phoneNumber}`}
+                className="w-full bg-white/10 border border-white/15 rounded-2xl px-4 py-4 flex items-center justify-center gap-3 text-green-400 font-black text-base sm:text-xl shadow-xl animate-pulse"
+              >
+                <Phone size={20} className="shrink-0" />
+                <span className="truncate">{phoneNumber}</span>
+              </a>
+
+              <div className="w-full bg-red-600 rounded-2xl px-4 py-4 flex items-center justify-center gap-3 text-white font-black text-sm sm:text-lg uppercase shadow-xl shadow-red-600/25 animate-pulse text-center">
+                <Clock3 size={20} className="shrink-0" />
+                <span>30 Minute Response Time</span>
+              </div>
+            </div>
+
             <div className="inline-flex max-w-full items-center gap-2 bg-white/10 border border-white/15 backdrop-blur-md rounded-full px-4 py-2 mb-5 shadow-lg">
               <Clock3 size={16} className="text-red-500 shrink-0" />
               <span className="text-xs sm:text-sm font-semibold truncate">
@@ -185,17 +214,6 @@ export default function Home() {
               <span className="block text-red-500">Mobile</span>
               <span className="block text-red-500">Tyres</span>
             </h1>
-
-            <div className="mt-5 inline-flex max-w-full bg-green-500 text-white px-4 sm:px-5 py-3 rounded-xl font-black text-base sm:text-xl uppercase shadow-xl shadow-green-500/25 animate-pulse">
-              30 Minute Response Time
-            </div>
-
-            <a
-              href={`tel:${phoneNumber}`}
-              className="mt-4 block text-red-500 font-black text-2xl sm:text-3xl animate-pulse break-words"
-            >
-              {phoneNumber}
-            </a>
 
             <p className="mt-6 text-base sm:text-lg md:text-xl text-gray-100 leading-relaxed max-w-2xl">
               Emergency mobile tyre fitting in Birmingham. Fast roadside tyre
