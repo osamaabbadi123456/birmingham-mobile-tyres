@@ -514,6 +514,99 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ABOUT US */}
+      <section className="relative bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-red-600 font-black uppercase tracking-[0.2em] text-sm mb-4">
+                About Birmingham Mobile Tyres
+              </p>
+
+              <h2 className="text-4xl sm:text-5xl font-black uppercase leading-tight text-slate-950">
+                Trusted Emergency
+                <span className="block text-[#123c9c]">
+                  Mobile Tyre Fitters
+                </span>
+                In Birmingham
+              </h2>
+
+              <p className="mt-6 text-lg text-slate-700 leading-relaxed">
+                Birmingham Mobile Tyres provides fast, reliable and affordable
+                emergency mobile tyre fitting across Birmingham and surrounding
+                areas. Whether you are stranded with a puncture, flat tyre or
+                tyre blowout, our fully equipped mobile tyre vans come directly
+                to your location.
+              </p>
+
+              <p className="mt-5 text-lg text-slate-700 leading-relaxed">
+                We offer 24/7 roadside tyre replacement, same day mobile tyre
+                fitting, puncture repairs, locking wheel nut removal and
+                emergency tyre services for cars, vans, SUVs and commercial
+                vehicles.
+              </p>
+
+              <div className="mt-8 grid sm:grid-cols-2 gap-4">
+                <div className="bg-slate-100 rounded-2xl p-5 border border-slate-200">
+                  <h3 className="font-black text-slate-950 text-lg">
+                    24/7 Emergency Support
+                  </h3>
+
+                  <p className="text-slate-600 mt-2 leading-relaxed">
+                    Day or night, our Birmingham tyre technicians are ready to
+                    help with fast roadside assistance.
+                  </p>
+                </div>
+
+                <div className="bg-slate-100 rounded-2xl p-5 border border-slate-200">
+                  <h3 className="font-black text-slate-950 text-lg">
+                    Mobile Tyre Experts
+                  </h3>
+
+                  <p className="text-slate-600 mt-2 leading-relaxed">
+                    Professional tyre fitting for cars, vans, SUVs and fleet
+                    vehicles across Birmingham.
+                  </p>
+                </div>
+
+                <div className="bg-slate-100 rounded-2xl p-5 border border-slate-200">
+                  <h3 className="font-black text-slate-950 text-lg">
+                    Fast Response Times
+                  </h3>
+
+                  <p className="text-slate-600 mt-2 leading-relaxed">
+                    We aim to provide rapid response mobile tyre assistance
+                    across Birmingham and nearby areas.
+                  </p>
+                </div>
+
+                <div className="bg-slate-100 rounded-2xl p-5 border border-slate-200">
+                  <h3 className="font-black text-slate-950 text-lg">
+                    Home & Roadside Fitting
+                  </h3>
+
+                  <p className="text-slate-600 mt-2 leading-relaxed">
+                    Tyre replacement and puncture repair at your home, workplace
+                    or roadside location.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 to-[#123c9c]/20 blur-3xl"></div>
+
+              <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 shadow-2xl">
+                <img
+                  src="/images/birmingham-poster.jpeg"
+                  alt="Emergency mobile tyre fitting Birmingham"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-16 px-5 sm:px-6 bg-red-600 text-white text-center">
