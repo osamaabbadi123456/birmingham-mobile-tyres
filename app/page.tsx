@@ -15,6 +15,7 @@ import {
   Zap,
   Star,
   Mail,
+  ArrowUp,
 } from "lucide-react";
 
 const phoneNumber = "+447397196257";
@@ -53,7 +54,19 @@ function Logo() {
     </div>
   );
 }
-
+const miniSliderImages = [
+  "/images/mini-slider/mini-1.jpeg",
+  "/images/mini-slider/mini-2.jpeg",
+  "/images/mini-slider/mini-3.jpeg",
+  "/images/mini-slider/mini-4.jpeg",
+  "/images/mini-slider/mini-5.jpeg",
+  "/images/mini-slider/mini-6.jpeg",
+  "/images/mini-slider/mini-7.jpeg",
+  "/images/mini-slider/mini-8.jpeg",
+  "/images/mini-slider/mini-9.jpeg",
+  "/images/mini-slider/mini-10.jpeg",
+  "/images/mini-slider/mini-11.jpeg",
+];
 const trustItems = [
   "30 Minute Response Time",
   "24/7 Emergency Mobile Tyres",
@@ -113,6 +126,7 @@ const faqs = [
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -121,7 +135,16 @@ export default function Home() {
 
     return () => clearInterval(timer);
   }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 700);
+    };
 
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
   };
@@ -137,16 +160,10 @@ export default function Home() {
       {/* TOP BRAND POSTER */}
       <section className="bg-[#FFFFFF] text-black">
         <header className="relative z-30 bg-[#FFFFFF]">
-          <div className="max-w-7xl mx-auto px-3 sm:px-6 py-3 grid grid-cols-[1fr_auto_1fr] items-center gap-2">
+          <div className="max-w-7xl mx-auto px-3 sm:px-6 py-3 flex items-center justify-between gap-3">
             <div className="[&_*]:!text-slate-950 scale-[0.78] sm:scale-100 origin-left justify-self-start w-[148px] sm:w-auto">
               <Logo />
             </div>
-
-            <img
-              src="/images/header-flash.jpeg"
-              alt="Accredited repairer"
-              className="w-10 h-10 sm:w-16 sm:h-16 lg:w-20 lg:h-20 object-contain animate-pulse justify-self-center"
-            />
 
             <a
               href={`tel:${phoneNumber}`}
@@ -158,6 +175,30 @@ export default function Home() {
             </a>
           </div>
         </header>
+        <div className="bg-white border-y border-gray-200 overflow-hidden py-3">
+          <motion.div
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{ repeat: Infinity, duration: 18, ease: "linear" }}
+            className="flex w-max gap-4 px-4"
+          >
+            {[...miniSliderImages, ...miniSliderImages].map((img, index) => (
+              <div
+                key={`${img}-${index}`}
+                className="w-28 h-32 sm:w-36 sm:h-40 rounded-2xl bg-white border border-gray-200 shadow-md overflow-hidden shrink-0"
+              >
+                <img
+                  src={img}
+                  alt=""
+                  aria-hidden="true"
+                  className="w-full h-full object-contain p-1"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
+              </div>
+            ))}
+          </motion.div>
+        </div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-3">
           <div className="w-full rounded-2xl bg-red-600 px-4 py-3 text-center shadow-xl shadow-red-600/30 animate-pulse">
             <span className="text-white text-sm sm:text-lg font-black uppercase tracking-wide">
@@ -844,6 +885,15 @@ export default function Home() {
           WhatsApp
         </a>
       </div>
+      {showBackToTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="fixed bottom-24 right-5 z-[60] w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#123c9c] text-white shadow-2xl flex items-center justify-center hover:bg-red-600 hover:-translate-y-1 transition-all duration-300"
+          aria-label="Back to top"
+        >
+          <ArrowUp size={34} className="sm:w-11 sm:h-11" />
+        </button>
+      )}
     </main>
   );
 }
