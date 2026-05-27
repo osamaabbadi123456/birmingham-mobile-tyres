@@ -158,10 +158,17 @@ export default function Home() {
             </a>
           </div>
         </header>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-3">
+          <div className="w-full rounded-2xl bg-red-600 px-4 py-3 text-center shadow-xl shadow-red-600/30 animate-pulse">
+            <span className="text-white text-sm sm:text-lg font-black uppercase tracking-wide">
+              30 Minute Response Time
+            </span>
+          </div>
+        </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-3">
-          <div className="w-full rounded-full bg-green-500 px-4 py-2 shadow-lg shadow-green-500/25 text-center">
-            <span className="text-white text-xs sm:text-sm font-black uppercase tracking-wide">
+          <div className="w-full rounded-full bg-green-500 px-5 py-3 shadow-xl shadow-green-500/30 text-center animate-pulse">
+            <span className="text-white text-sm sm:text-lg font-black uppercase tracking-wide">
               The City’s Local Mobile Tyre Fleet
             </span>
           </div>
@@ -177,7 +184,7 @@ export default function Home() {
       </section>
 
       {/* HERO CONTENT */}
-      <section className="relative bg-slate-950 text-white overflow-hidden">
+      <section className="relative bg-[#123c9c] text-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(220,38,38,0.12),transparent_34%),radial-gradient(circle_at_15%_85%,rgba(18,60,156,0.12),transparent_38%)]"></div>
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 pt-14 sm:pt-20 pb-20">
@@ -282,7 +289,7 @@ export default function Home() {
       {/* FULL WIDTH SLIDER */}
       <section className="relative bg-white py-12 sm:py-16 overflow-hidden">
         <div className="max-w-[1800px] mx-auto px-3 sm:px-6">
-          <div className="mb-8 max-w-7xl mx-auto rounded-2xl bg-slate-950 text-white p-6 sm:p-8 shadow-2xl border border-slate-800">
+          <div className="mb-8 max-w-7xl mx-auto rounded-2xl bg-[#123c9c] text-white p-6 sm:p-8 shadow-2xl border border-slate-800">
             <p className="text-green-400 font-black uppercase text-sm mb-2 animate-pulse">
               30 Minute Response Time
             </p>
@@ -386,7 +393,7 @@ export default function Home() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-20 px-5 sm:px-6 bg-slate-950 text-white">
+      <section className="py-20 px-5 sm:px-6 bg-[#123c9c] text-white">
         <div className="max-w-7xl mx-auto">
           <p className="text-red-500 font-black uppercase text-sm mb-3">
             Simple Process
@@ -548,7 +555,7 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-slate-950 text-white px-5 sm:px-6 py-10 pb-24 md:pb-10">
+      <footer className="bg-[#123c9c] text-white px-5 sm:px-6 py-10 pb-24 md:pb-10">
         <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center">
           <Logo />
 
