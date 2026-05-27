@@ -515,94 +515,224 @@ export default function Home() {
         </div>
       </section>
       {/* ABOUT US */}
-      <section className="relative bg-white overflow-hidden">
+      <section id="about-us" className="relative bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <p className="text-red-600 font-black uppercase tracking-[0.2em] text-sm mb-4">
-                About Birmingham Mobile Tyres
-              </p>
+          <div className="max-w-4xl">
+            <p className="text-red-600 font-black uppercase tracking-[0.2em] text-sm mb-4">
+              About Birmingham Mobile Tyres
+            </p>
 
-              <h2 className="text-4xl sm:text-5xl font-black uppercase leading-tight text-slate-950">
-                Trusted Emergency
-                <span className="block text-[#123c9c]">
-                  Mobile Tyre Fitters
-                </span>
-                In Birmingham
-              </h2>
+            <h2 className="text-4xl sm:text-5xl font-black uppercase leading-tight text-slate-950 mb-6">
+              Mobile Tyre Fitting Birmingham
+              <span className="block text-[#123c9c]">
+                24 Hour Emergency Tyre Replacement
+              </span>
+            </h2>
 
-              <p className="mt-6 text-lg text-slate-700 leading-relaxed">
-                Birmingham Mobile Tyres provides fast, reliable and affordable
-                emergency mobile tyre fitting across Birmingham and surrounding
-                areas. Whether you are stranded with a puncture, flat tyre or
-                tyre blowout, our fully equipped mobile tyre vans come directly
-                to your location.
-              </p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-5">
+              If you are stranded with a puncture or damaged tyre, Birmingham
+              Mobile Tyres can help quickly. We provide emergency mobile tyre
+              fitting, roadside tyre replacement, puncture repair and tyre
+              assistance throughout Birmingham and the surrounding West Midlands
+              areas.
+            </p>
 
-              <p className="mt-5 text-lg text-slate-700 leading-relaxed">
-                We offer 24/7 roadside tyre replacement, same day mobile tyre
-                fitting, puncture repairs, locking wheel nut removal and
-                emergency tyre services for cars, vans, SUVs and commercial
-                vehicles.
-              </p>
+            <p className="text-lg text-slate-700 leading-relaxed mb-5">
+              Whether you have a flat tyre at home, a puncture at work, a
+              blowout on the motorway or need new tyres fitted urgently, our
+              mobile tyre fitting service comes directly to your location. We
+              save you time, stress and hassle by bringing professional tyre
+              fitting to your home, workplace or roadside location.
+            </p>
 
-              <div className="mt-8 grid sm:grid-cols-2 gap-4">
-                <div className="bg-slate-100 rounded-2xl p-5 border border-slate-200">
-                  <h3 className="font-black text-slate-950 text-lg">
-                    24/7 Emergency Support
-                  </h3>
+            <p className="text-lg text-slate-700 leading-relaxed mb-8">
+              Our service covers cars, vans, SUVs, 4x4 vehicles and light
+              commercial vehicles. We offer budget, mid-range and premium tyre
+              options, helping Birmingham drivers get back on the road quickly
+              and safely.
+            </p>
+          </div>
 
-                  <p className="text-slate-600 mt-2 leading-relaxed">
-                    Day or night, our Birmingham tyre technicians are ready to
-                    help with fast roadside assistance.
-                  </p>
-                </div>
-
-                <div className="bg-slate-100 rounded-2xl p-5 border border-slate-200">
-                  <h3 className="font-black text-slate-950 text-lg">
-                    Mobile Tyre Experts
-                  </h3>
-
-                  <p className="text-slate-600 mt-2 leading-relaxed">
-                    Professional tyre fitting for cars, vans, SUVs and fleet
-                    vehicles across Birmingham.
-                  </p>
-                </div>
-
-                <div className="bg-slate-100 rounded-2xl p-5 border border-slate-200">
-                  <h3 className="font-black text-slate-950 text-lg">
-                    Fast Response Times
-                  </h3>
-
-                  <p className="text-slate-600 mt-2 leading-relaxed">
-                    We aim to provide rapid response mobile tyre assistance
-                    across Birmingham and nearby areas.
-                  </p>
-                </div>
-
-                <div className="bg-slate-100 rounded-2xl p-5 border border-slate-200">
-                  <h3 className="font-black text-slate-950 text-lg">
-                    Home & Roadside Fitting
-                  </h3>
-
-                  <p className="text-slate-600 mt-2 leading-relaxed">
-                    Tyre replacement and puncture repair at your home, workplace
-                    or roadside location.
-                  </p>
-                </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+            {[
+              "Emergency tyre fitting Birmingham",
+              "24 hour mobile tyre fitting",
+              "Roadside tyre replacement",
+              "Mobile puncture repair",
+              "Flat tyre assistance",
+              "Same day tyre fitting",
+              "Locking wheel nut removal",
+              "Mobile tyre replacement near me",
+              "Out of hours tyre fitting Birmingham",
+              "Home mobile tyre fitting",
+              "Workplace tyre fitting",
+              "Van mobile tyre fitting Birmingham",
+            ].map((item) => (
+              <div
+                key={item}
+                className="bg-gray-50 border border-gray-200 rounded-2xl p-5 font-black text-slate-800 flex items-center gap-3"
+              >
+                <Star
+                  size={18}
+                  className="text-red-600 fill-red-600 shrink-0"
+                />
+                {item}
               </div>
+            ))}
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 mt-16 items-start">
+            <div>
+              <h3 className="text-3xl font-black uppercase text-slate-950 mb-5">
+                Trusted Mobile Tyre Fitters In Birmingham
+              </h3>
+
+              <p className="text-slate-700 leading-relaxed mb-5">
+                We aim to be one of Birmingham’s reliable mobile tyre fitting
+                services, focused on speed, convenience and professional
+                workmanship. Instead of waiting at a garage, our mobile tyre
+                technicians come to your home, workplace, roadside location, car
+                park or motorway breakdown location where safe and accessible.
+              </p>
+
+              <p className="text-slate-700 leading-relaxed mb-5">
+                Our mobile tyre fitting vans are equipped to help with emergency
+                tyre replacement, puncture repair, same day tyre fitting and
+                roadside tyre assistance. If your tyre is repairable under
+                safety standards, we may be able to repair it. If not, a
+                replacement tyre may be required.
+              </p>
+
+              <h3 className="text-3xl font-black uppercase text-slate-950 mt-10 mb-5">
+                24 Hour Emergency Tyre Fitting
+              </h3>
+
+              <p className="text-slate-700 leading-relaxed">
+                A tyre emergency can happen at any time. That is why our service
+                is built around urgent tyre call-outs across Birmingham. If your
+                tyre blows out late at night, early in the morning or during a
+                busy working day, call or WhatsApp for fast mobile tyre
+                assistance.
+              </p>
             </div>
 
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-red-500/20 to-[#123c9c]/20 blur-3xl"></div>
+            <div className="bg-[#123c9c] text-white rounded-[2rem] p-8 shadow-2xl">
+              <h3 className="text-3xl font-black uppercase mb-6">
+                Areas We Cover
+              </h3>
 
-              <div className="relative overflow-hidden rounded-[2rem] border border-slate-200 shadow-2xl">
-                <img
-                  src="/images/birmingham-poster.jpeg"
-                  alt="Emergency mobile tyre fitting Birmingham"
-                  className="w-full h-full object-cover"
-                />
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  "Birmingham City Centre",
+                  "Edgbaston",
+                  "Selly Oak",
+                  "Harborne",
+                  "Erdington",
+                  "Sutton Coldfield",
+                  "Solihull",
+                  "Kings Heath",
+                  "Moseley",
+                  "Handsworth",
+                  "Perry Barr",
+                  "Yardley",
+                  "Small Heath",
+                  "Hodge Hill",
+                  "Northfield",
+                  "Quinton",
+                  "Aston",
+                  "Digbeth",
+                  "West Bromwich",
+                  "Walsall",
+                  "Wolverhampton",
+                  "Dudley",
+                  "Coventry",
+                  "Smethwick",
+                ].map((area) => (
+                  <div
+                    key={area}
+                    className="bg-white/10 border border-white/10 rounded-xl p-3 text-sm font-bold"
+                  >
+                    {area}
+                  </div>
+                ))}
               </div>
+            </div>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+            {[
+              {
+                title: "Fast Response Times",
+                text: "Rapid mobile tyre fitting throughout Birmingham and surrounding areas.",
+              },
+              {
+                title: "24/7 Availability",
+                text: "Emergency tyre fitting support available day and night.",
+              },
+              {
+                title: "Professional Technicians",
+                text: "Experienced mobile tyre fitters for cars, vans, SUVs and light commercial vehicles.",
+              },
+              {
+                title: "Competitive Prices",
+                text: "Affordable tyre fitting with clear service options.",
+              },
+              {
+                title: "Convenience",
+                text: "We come to your home, workplace or roadside location.",
+              },
+              {
+                title: "Wide Tyre Options",
+                text: "Budget, mid-range and premium tyres available depending on your needs.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-2xl border border-gray-200 bg-gray-50 p-6"
+              >
+                <h3 className="text-xl font-black text-slate-950 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed">{item.text}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 bg-slate-950 text-white rounded-[2rem] p-8 sm:p-10">
+            <h3 className="text-3xl sm:text-4xl font-black uppercase mb-5">
+              Book Mobile Tyre Fitting Birmingham Today
+            </h3>
+
+            <p className="text-gray-300 leading-relaxed text-lg mb-6">
+              If you need emergency tyre fitting, same day tyres, mobile
+              puncture repair, roadside tyre replacement, cheap tyres
+              Birmingham, 24 hour tyre fitting, home tyre fitting or workplace
+              tyre fitting, Birmingham Mobile Tyres is ready to help.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href={`tel:${phoneNumber}`}
+                className="bg-red-600 hover:bg-red-700 rounded-xl px-7 py-4 flex items-center justify-center gap-3 font-black transition"
+              >
+                <Phone size={21} />
+                Call Now
+              </a>
+
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#25D366] hover:bg-[#1ebe5d] rounded-xl px-7 py-4 flex items-center justify-center gap-3 font-black transition"
+              >
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                  alt="WhatsApp"
+                  width={24}
+                  height={24}
+                />
+                WhatsApp
+              </a>
             </div>
           </div>
         </div>
