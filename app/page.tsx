@@ -135,8 +135,8 @@ export default function Home() {
   return (
     <main className="bg-white text-slate-950 overflow-x-hidden">
       {/* TOP BRAND POSTER */}
-      <section className="bg-[#12459c]">
-        <header className="relative z-30 bg-[#12199c]">
+      <section className="bg-[#FFFFFF] text-black">
+        <header className="relative z-30 bg-[#FFFFFF]">
           <div className="max-w-7xl mx-auto px-3 sm:px-6 py-3 grid grid-cols-[1fr_auto_1fr] items-center gap-2">
             <div className="[&_*]:!text-slate-950 scale-[0.78] sm:scale-100 origin-left justify-self-start w-[148px] sm:w-auto">
               <Logo />
