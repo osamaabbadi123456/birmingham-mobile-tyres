@@ -199,18 +199,18 @@ export default function Home() {
             ))}
           </motion.div>
         </div>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-3">
-          <div className="w-full rounded-2xl bg-red-600 px-4 py-3 text-center shadow-xl shadow-red-600/30 animate-pulse">
-            <span className="text-white text-sm sm:text-lg font-black uppercase tracking-wide">
-              30 Minute Response Time
-            </span>
-          </div>
-        </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-3">
           <div className="w-full rounded-full bg-green-500 px-5 py-3 shadow-xl shadow-green-500/30 text-center animate-pulse">
             <span className="text-white text-sm sm:text-lg font-black uppercase tracking-wide">
               The City’s Local Mobile Tyre Fleet
+            </span>
+          </div>
+        </div>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-3">
+          <div className="w-full rounded-2xl bg-red-600 px-4 py-3 text-center shadow-xl shadow-red-600/30 animate-pulse">
+            <span className="text-white text-sm sm:text-lg font-black uppercase tracking-wide">
+              30 Minute Response Time
             </span>
           </div>
         </div>
