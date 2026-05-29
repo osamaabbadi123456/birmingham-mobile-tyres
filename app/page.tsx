@@ -241,11 +241,18 @@ export default function Home() {
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-8">
-          <img
-            src="/images/birmingham-poster.jpeg"
-            alt="Birmingham Mobile Tyres 24/7 emergency tyre service"
-            className="w-full h-auto rounded-2xl shadow-2xl border border-gray-200"
-          />
+          <a
+            href={whatsappLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <img
+              src="/images/birmingham-poster.jpeg"
+              alt="Birmingham Mobile Tyres 24/7 emergency tyre service"
+              className="w-full h-auto rounded-2xl shadow-2xl border border-gray-200"
+            />
+          </a>
         </div>
       </section>
 
@@ -889,7 +896,7 @@ export default function Home() {
       <div className="fixed bottom-0 left-0 right-0 z-50 grid grid-cols-2 md:hidden">
         <a
           href={`tel:${phoneNumber}`}
-          className="bg-red-600 text-white py-4 flex items-center justify-center gap-2 font-black"
+          className="bg-red-600 text-white py-4 flex items-center justify-center gap-2 font-black animate-pulse"
         >
           <Phone size={20} />
           Call
@@ -899,7 +906,7 @@ export default function Home() {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#25D366] text-white py-4 flex items-center justify-center gap-2 font-black"
+          className="bg-[#25D366] text-white py-4 flex items-center justify-center gap-2 font-black animate-pulse"
         >
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
