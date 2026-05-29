@@ -18,8 +18,8 @@ import {
   ArrowUp,
 } from "lucide-react";
 
-const phoneNumber = "+447397196257";
-const whatsappNumber = "447397196257";
+const phoneNumber = "+447737428534";
+const whatsappNumber = "447737428534";
 const emailAddress = "BirminghamMobileTyres@gmail.com";
 
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hi%2C%20I%20need%20mobile%20tyre%20assistance%20in%20Birmingham.`;
@@ -162,7 +162,12 @@ export default function Home() {
         <header className="relative z-30 bg-[#FFFFFF]">
           <div className="max-w-7xl mx-auto px-3 sm:px-6 py-3 flex items-center justify-between gap-3">
             <div className="[&_*]:!text-slate-950 scale-[0.78] sm:scale-100 origin-left justify-self-start w-[148px] sm:w-auto">
-              <Logo />
+              <a
+                href={`tel:${phoneNumber}`}
+                className="[&_*]:!text-slate-950 scale-[0.78] sm:scale-100 origin-left justify-self-start w-[148px] sm:w-auto"
+              >
+                <Logo />
+              </a>
             </div>
 
             <a
@@ -175,6 +180,17 @@ export default function Home() {
             </a>
           </div>
         </header>
+        <div
+          className="sticky top-0 z-40 bg-[#123c9c] text-white text-center px-4 py-3 shadow-xl animate-pulse"
+          style={{ animationDuration: "0.7s" }}
+        >
+          <a
+            href={`tel:${phoneNumber}`}
+            className="font-black text-sm sm:text-lg"
+          >
+            30 Minute Response Time — Call Now: {phoneNumber}
+          </a>
+        </div>
         <div className="bg-white border-y border-gray-200 overflow-hidden py-3">
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
@@ -201,18 +217,27 @@ export default function Home() {
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-3">
-          <div className="w-full rounded-full bg-green-500 px-5 py-3 shadow-xl shadow-green-500/30 text-center animate-pulse">
-            <span className="text-white text-sm sm:text-lg font-black uppercase tracking-wide">
-              The City’s Local Mobile Tyre Fleet
-            </span>
-          </div>
-        </div>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-3">
-          <div className="w-full rounded-2xl bg-red-600 px-4 py-3 text-center shadow-xl shadow-red-600/30 animate-pulse">
+          <a
+            href={`tel:${phoneNumber}`}
+            className="block w-full rounded-2xl bg-[#123c9c] px-4 py-3 text-center shadow-xl shadow-blue-700/30 animate-pulse"
+            style={{ animationDuration: "0.7s" }}
+          >
             <span className="text-white text-sm sm:text-lg font-black uppercase tracking-wide">
               30 Minute Response Time
             </span>
-          </div>
+          </a>
+        </div>
+
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-3">
+          <a
+            href={`tel:${phoneNumber}`}
+            className="block w-full rounded-full bg-[#123c9c] px-5 py-3 shadow-xl shadow-blue-700/30 text-center animate-pulse"
+            style={{ animationDuration: "0.7s" }}
+          >
+            <span className="text-white text-sm sm:text-lg font-black uppercase tracking-wide">
+              The City’s Local Mobile Tyre Fleet
+            </span>
+          </a>
         </div>
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 pb-8">
