@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
+
+const GA_MEASUREMENT_ID = "G-H5TRFC39CS";
 
 export const metadata: Metadata = {
   title: "24/7 Birmingham Mobile Tyres | 30 Minute Emergency Tyre Response",
@@ -68,7 +71,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en-GB">
-      <body>{children}</body>
+      <body>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+
+        {children}
+      </body>
     </html>
   );
 }
