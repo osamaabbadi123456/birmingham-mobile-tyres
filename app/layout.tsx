@@ -5,7 +5,7 @@ import "./globals.css";
 const GA_MEASUREMENT_ID = "G-H5TRFC39CS";
 
 export const metadata: Metadata = {
-  title: "24/7 Birmingham Mobile Tyres | 30 Minute Emergency Tyre Response",
+  title: "Birmingham Mobile Tyres | 24/7 Emergency Tyre Fitting",
   description:
     "24/7 emergency mobile tyre fitting in Birmingham with 30 minute response time. Roadside tyre replacement, puncture repair and mobile tyre assistance at your home, work or roadside location.",
   keywords: [
