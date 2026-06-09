@@ -180,17 +180,7 @@ export default function Home() {
             </a>
           </div>
         </header>
-        <div
-          className="sticky top-0 z-40 bg-[#123c9c] text-white text-center px-4 py-3 shadow-xl animate-pulse"
-          style={{ animationDuration: "0.7s" }}
-        >
-          <a
-            href={`tel:${phoneNumber}`}
-            className="font-black text-sm sm:text-lg"
-          >
-            30 Minute Response Time — Call Now: {phoneNumber}
-          </a>
-        </div>
+
         <div className="bg-white border-y border-gray-200 overflow-hidden py-3">
           <motion.div
             animate={{ x: ["0%", "-50%"] }}
