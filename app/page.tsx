@@ -126,6 +126,7 @@ const faqs = [
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentPosterSlide, setCurrentPosterSlide] = useState(0);
   const [showBackToTop, setShowBackToTop] = useState(false);
 
   useEffect(() => {
@@ -135,6 +136,15 @@ export default function Home() {
 
     return () => clearInterval(timer);
   }, []);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentPosterSlide((prev) => (prev + 1) % 2);
+    }, 3000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       setShowBackToTop(window.scrollY > 700);
@@ -161,18 +171,16 @@ export default function Home() {
       <section className="bg-[#FFFFFF] text-black">
         <header className="relative z-30 bg-[#FFFFFF]">
           <div className="max-w-7xl mx-auto px-3 sm:px-6 py-3 flex items-center justify-between gap-3">
-            <div className="[&_*]:!text-slate-950 scale-[0.78] sm:scale-100 origin-left justify-self-start w-[148px] sm:w-auto">
-              <a
-                href={`tel:${phoneNumber}`}
-                className="[&_*]:!text-slate-950 scale-[0.78] sm:scale-100 origin-left justify-self-start w-[148px] sm:w-auto"
-              >
-                <Logo />
-              </a>
-            </div>
+            <a
+              href={`tel:${phoneNumber}`}
+              className="[&_*]:!text-slate-950 scale-[0.78] sm:scale-100 origin-left w-[148px] sm:w-auto"
+            >
+              <Logo />
+            </a>
 
             <a
               href={`tel:${phoneNumber}`}
-              className="flex bg-red-600 hover:bg-red-700 transition-all duration-300 rounded-full px-3 sm:px-6 py-2.5 sm:py-3 items-center gap-1.5 sm:gap-2 font-black text-white shadow-xl shadow-red-600/25 animate-pulse text-xs sm:text-base shrink-0 justify-self-end"
+              className="flex bg-red-600 hover:bg-red-700 transition-all duration-300 rounded-full px-3 sm:px-6 py-2.5 sm:py-3 items-center gap-1.5 sm:gap-2 font-black text-white shadow-xl shadow-red-600/25 animate-pulse text-xs sm:text-base shrink-0"
             >
               <Phone size={14} className="sm:w-[18px] sm:h-[18px]" />
               <span className="hidden md:inline">{phoneNumber}</span>
@@ -180,6 +188,11 @@ export default function Home() {
             </a>
           </div>
         </header>
+
+        <div className="bg-[#FDB913] text-slate-950 text-center py-3 px-4 font-black text-sm sm:text-base shadow-md">
+          Top Rated • Servicing Birmingham, Solihull & All Surrounding Areas +12
+          Mile Radius
+        </div>
 
         <div className="bg-white border-y border-gray-200 overflow-hidden py-3">
           <motion.div
@@ -237,11 +250,17 @@ export default function Home() {
             rel="noopener noreferrer"
             className="block"
           >
-            <img
-              src="/images/birmingham-poster.jpeg"
-              alt="Birmingham Mobile Tyres 24/7 emergency tyre service"
-              className="w-full h-auto rounded-2xl shadow-2xl border border-gray-200"
-            />
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl border border-gray-200 bg-white">
+              <img
+                src={
+                  currentPosterSlide === 0
+                    ? "/images/birmingham-poster.jpeg"
+                    : "/images/birmingham-poster-2.jpeg"
+                }
+                alt="Birmingham Mobile Tyres 24/7 emergency tyre service"
+                className="w-full h-auto block"
+              />
+            </div>
           </a>
         </div>
       </section>
